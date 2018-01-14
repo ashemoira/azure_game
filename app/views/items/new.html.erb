@@ -1,0 +1,30 @@
+<h1>アイテム登録</h1>
+<p>アイテム名とアイテム詳細を登録する</p>
+<div>
+  <div>
+    <%= form_with(model: @item, local: true) do |form| %>
+        <% if @item.errors.any? %>
+            <div id="error_explanation">
+              <h2>入力エラーがあります</h2>
+              <ul>
+                <% @item.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <ul>
+          <li>
+            <strong><%= form.label :name, 'アイテム名' %></strong>
+            <%= form.text_field :name %>
+          </li>
+          <li>
+            <strong><%= form.label :explanation, 'アイテム説明' %></strong>
+            <%= form.text_area :explanation %>
+          </li>
+        </ul>
+        <%= form.submit '登録' %>
+    <% end %>
+  </div>
+</div>

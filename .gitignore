@@ -16,7 +16,7 @@
 /tmp/*
 /test/*
 /db/*
-/.idea/workspace.xml
+/.idea/*
 !/log/.keep
 !/tmp/.keep
 

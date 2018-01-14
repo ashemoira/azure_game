@@ -1,0 +1,9 @@
+<h1>アイテム一覧</h1>
+<div>
+  <p></p>
+  <% @items.each do |item| %>
+      <p><%= item.name %></p>
+      <%= link_to '詳細', item %>
+      <%= link_to '変更', edit_item_path(item) %>
+  <% end %>
+</div>

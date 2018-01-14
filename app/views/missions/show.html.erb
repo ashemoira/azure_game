@@ -1,0 +1,37 @@
+<h1>任務詳細</h1>
+<p>任務の詳細を表示する</p>
+<div>
+  <div>
+    <ul>
+      <li>
+        <strong>任務タイトル</strong>
+        <p><%= @mission.title %></p>
+      </li>
+      <li>
+        <strong>任務内容</strong>
+        <p><%= @mission.content %></p>
+      </li>
+      <li>
+        <strong>任務タイプ</strong>
+        <p><%= @mission.mission_type %></p>
+      </li>
+      <li>
+        <strong>回数</strong>
+        <p><%= @mission.frequency %></p>
+      </li>
+      <li>
+        <strong>報酬id</strong>
+        <p><%= @mission.reward_id %></p>
+      </li>
+      <li>
+        <string>達成済</string>
+        <% if @mission.achievement %>
+            <p>達成済</p>
+        <% elsif @mission.achievement %>
+            <p>未達成</p>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+

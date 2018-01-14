@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <h1>任務一覧</h1>
+  </div>
+  <div>
+    <% @missions.each do |mission| %>
+        <p><%= mission.title %></p>
+        <%= link_to '詳細', mission %>
+        <%= link_to '変更', edit_mission_path(mission) %>
+    <% end %>
+  </div>
+</div>
+
