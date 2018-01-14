@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'units/new'
+
+  get 'units/show'
+
+  get 'units/index'
+
   resources :missions
   resources :items
 
