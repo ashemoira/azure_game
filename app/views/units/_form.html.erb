@@ -1,0 +1,41 @@
+<%= form_with model: @unit do |form| %>
+<div class="field">
+  <p>艦隊名</p>
+  <%= form.text_field :name %>
+</div>
+  <div class="field">
+    <p>艦隊タイプ</p>
+    <%= form.text_field :category %>
+  </div>
+  <div class="field">
+    <p>前衛(左)</p>
+    <%= form.text_field :vanguard_left %>
+  </div>
+  <div class="field">
+    <p>前衛(中央)</p>
+    <%= form.text_field :vanguard_center %>
+  </div>
+  <div class="field">
+  <p>前衛(右)</p>
+  <%= form.text_field :vanguard_right %>
+</div>
+<div class="field">
+  <p>主力(左)</p>
+  <%= form.text_field :mainstay_left %>
+</div>
+<div class="field">
+  <p>主力(中央)</p>
+  <%= form.text_field :mainstay_center %>
+</div>
+<div class="field">
+  <p>主力(右)</p>
+  <%= form.text_field :mainstay_right %>
+</div>
+<div class="field">
+  <p>特徴/コメント</p>
+  <%= form.text_field :comment %>
+</div>
+<div class="submit_field">
+  <%= form.submit submit_name %>
+</div>
+<% end %>

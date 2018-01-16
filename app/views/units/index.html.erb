@@ -1,2 +1,27 @@
-<h1>Units#index</h1>
-<p>Find me in app/views/units/index.html.erb</p>
+<h1>艦隊一覧</h1>
+<div class="unitList">
+  <div class="card">
+    <div class="field">
+      <p>艦隊名</p>
+    </div>
+    <div class="field">
+      <p>艦隊タイプ</p>
+    </div>
+    <div class="field">
+      <p>コメント</p>
+    </div>
+  </div>
+  <% @units.each do |unit| %>
+    <div class="card">
+      <div class="field">
+        <%= unit.name %>
+      </div>
+      <div class="field">
+        <%= unit.category %>
+      </div>
+      <div class="field">
+        <%= unit.comment %>
+      </div>
+    </div>
+  <% end %>
+</div>

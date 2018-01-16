@@ -1,13 +1,13 @@
 FactoryGirl.define do
   factory :unit do
     name "MyString"
-    type 1
-    vanguard_left "MyString"
-    vanguard_center "MyString"
-    vanguard_right "MyString"
-    mainstay_left "MyString"
-    mainstay_center "MyString"
-    mainstay_right "MyString"
+    category 1
+    vanguard_left 1
+    vanguard_center 1
+    vanguard_right 1
+    mainstay_left 1
+    mainstay_center 1
+    mainstay_right 1
     comment "MyString"
   end
 end
