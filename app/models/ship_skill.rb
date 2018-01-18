@@ -1,0 +1,2 @@
+class ShipSkill < ApplicationRecord
+end
