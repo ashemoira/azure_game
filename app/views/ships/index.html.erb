@@ -1,0 +1,35 @@
+<h1>艦娘一覧</h1>
+<div class="shipList">
+  <div class="card">
+    <div class="field">
+      <p>図鑑番号</p>
+      <p>艦名</p>
+      <p>所属</p>
+      <p>レアリティ</p>
+      <p>艦種</p>
+      <p>ポジション</p>
+    </div>
+  </div>
+  <% @ships.each do |ship| %>
+    <div class="card">
+      <div class="field">
+        <%= ship.id %>
+      </div>
+      <div class="field">
+        <%= ship.name %>
+      </div>
+      <div class="field">
+        <%= ship.camp %>
+      </div>
+      <div class="field">
+        <%= ship.rarity %>
+      </div>
+      <div class="field">
+        <%= ship.ship_type %>
+      </div>
+      <div class="field">
+        <%= ship.fleet_position %>
+      </div>
+    </div>
+  <% end %>
+</div>

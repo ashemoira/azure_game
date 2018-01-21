@@ -1,6 +1,6 @@
 class UnitsController < ApplicationController
   before_action :fetch_units, only: %i[index]
-  before_action :fetch_unit, only: %i[edit show update edit]
+  before_action :fetch_unit, only: %i[edit show update]
 
   permits :name,
           :category,

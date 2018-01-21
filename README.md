@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+2.4
 
 * System dependencies
 
@@ -21,5 +22,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-# azure_game
+#### アズレンシェア
+人によって艦隊の個性はあるけどそれをシェアする場所がまだ提供されていない
+wikiにもおすすめ構成はあるけど本当にそれが最適解なの？
+その疑問を解決するためにも艦隊の情報をシェアするwebサービスを作る
+
