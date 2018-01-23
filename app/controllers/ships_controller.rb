@@ -45,7 +45,7 @@ class ShipsController < ApplicationController
     private
 
     def fetch_ship(id)
-      @ship = Ship.find(id)
+      @ship = Ship.find_by!(id: id)
     end
 
     def fetch_all_ship
