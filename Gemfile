@@ -45,6 +45,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'factory_girl_rails'
+  gem 'enumerize'
+  gem 'draper'
 end
 
 group :development do
