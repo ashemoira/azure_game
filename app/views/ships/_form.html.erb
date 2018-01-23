@@ -1,21 +1,27 @@
-<% form_with model:@ship do |form| %>
+<%= form_with model: @ship do |form| %>
   <div class="field">
-    <p>艦名</p>
+    <%= form.label :name, '艦名' %>
+    <%= form.text_field :name %>
   </div>
   <div class="field">
-    <p>所属</p>
+    <%= form.label :camp, '所属' %>
+    <%= form.text_field :camp %>
   </div>
   <div class="field">
-    <p>レアリティ</p>
+    <%= form.label :rarity, 'レアリティ' %>
+    <%= form.text_field :rarity %>
   </div>
   <div class="field">
-    <p>艦種</p>
+    <%= form.label :ship_type, '艦種' %>
+    <%= form.text_field :ship_type %>
   </div>
   <div class="field">
-    <p>ポジション</p>
+    <%= form.label :fleet_position, 'ポジション' %>
+    <%= form.text_field :fleet_position %>
   </div>
   <div class="field">
-    <p>キャラ詳細</p>
+    <%= form.label :introduction, 'キャラ詳細' %>
+    <%= form.text_field :introduction %>
   </div>
   <div class="submit_field">
     <%= form.submit submit_name %>
