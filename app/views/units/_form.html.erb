@@ -9,27 +9,27 @@
   </div>
   <div class="field">
     <%= form.label :vanguard_left, '前衛(左)' %>
-    <%= form.text_field :vanguard_left %>
+    <%= form.collection_select :vanguard_left, @scout, :id, :name %>
   </div>
   <div class="field">
     <%= form.label :vanguard_center, '前衛(中央)' %>
-    <%= form.text_field :vanguard_center %>
+    <%= form.collection_select :vanguard_center, @scout, :id, :name %>
   </div>
   <div class="field">
     <%= form.label :vanguard_right, '前衛(右)' %>
-    <%= form.text_field :vanguard_right %>
+    <%= form.collection_select :vanguard_right, @scout, :id, :name %>
   </div>
   <div class="field">
     <%= form.label :mainstay_left, '主力(左)' %>
-    <%= form.text_field :mainstay_left %>
+    <%= form.collection_select :mainstay_left, @main, :id, :name %>
   </div>
   <div class="field">
     <%= form.label :mainstay_center, '主力(中央)' %>
-    <%= form.text_field :mainstay_center %>
+    <%= form.collection_select :mainstay_center, @main, :id, :name %>
   </div>
   <div class="field">
     <%= form.label :mainstay_right, '主力(右)' %>
-    <%= form.text_field :mainstay_right %>
+    <%= form.collection_select :mainstay_right, @main, :id, :name %>
   </div>
   <div class="field">
     <%= form.label :comment, '特徴/コメント' %>

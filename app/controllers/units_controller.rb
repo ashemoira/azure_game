@@ -15,6 +15,8 @@ class UnitsController < ApplicationController
   def index; end
 
   def new
+    @scout = Ship.where(fleet_position: :scout)
+    @main = Ship.where(fleet_position: :main)
     @unit = Unit.new
   end
 
