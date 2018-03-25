@@ -5,6 +5,7 @@ class ShipsController < ApplicationController
   permits :id,
           :name,
           :camp,
+          :number,
           :rarity,
           :ship_type,
           :introduction,
@@ -14,17 +15,20 @@ class ShipsController < ApplicationController
     @ship = Ship.new
   end
 
-  def index;end
+  def index;
+  end
 
-  def show;end
+  def show;
+  end
 
-  def edit;end
+  def edit;
+  end
 
   def create(ship)
     @ship = Ship.new(ship)
     if @ship.valid?
       @ship.save
-      redirect_to @ship
+      redirect_to ships_path
     else
       redirect_back(fallback_location: new_ship_path)
     end
@@ -32,7 +36,7 @@ class ShipsController < ApplicationController
 
   def update
     if @ship.update(unit)
-      redirect_to @ship
+      redirect_to ships_path
     else
       redirect_back(fallback_location: edit_ship_path)
     end
@@ -43,13 +47,13 @@ class ShipsController < ApplicationController
     redirect_to ship_index_path
   end
 
-    private
+  private
 
-    def fetch_ship(id)
-      @ship = Ship.find_by!(id: id)
-    end
+  def fetch_ship(id)
+    @ship = Ship.find_by!(id: id)
+  end
 
-    def fetch_all_ship
-      @ships = Ship.all
-    end
+  def fetch_all_ship
+    @ships = Ship.all
+  end
 end

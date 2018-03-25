@@ -1,9 +1,8 @@
 <div class="shipListArea">
-  <h1 class="ship-title">艦娘一覧</h1>
+  <h1 class="ship-title">艦一覧</h1>
   <div class="ship-list">
     <div class="ship-item">
       <div class="field">
-        メモ：カード型のレイアウトにする
         <div class="field">
           <p>図鑑番号</p>
         </div>
@@ -12,9 +11,6 @@
         </div>
         <div class="field">
           <p>所属</p>
-        </div>
-        <div class="field">
-          <p>レアリティ</p>
         </div>
         <div class="field">
           <p>艦種</p>
@@ -27,16 +23,13 @@
     <% @ships.each do |ship| %>
       <div class="ship-item <%= ship.rarity %>">
         <div class="field">
-          <%= ship.id %>
+          <%= ship.number %>
         </div>
         <div class="field">
           <%= ship.name %>
         </div>
         <div class="field">
           <%= ship.camp.text %>
-        </div>
-        <div class="field">
-          <%= ship.rarity.text %>
         </div>
         <div class="field">
           <%= ship.ship_type.text %>

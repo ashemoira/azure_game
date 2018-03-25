@@ -2,59 +2,58 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  background-color: lightcyan;
+body {
 }
 
-.shipListArea{
+.shipListArea {
   width: 1000px;
   margin: 0 auto;
-  margin-top: 10px;
 }
 
-.ship-title{
+.ship-title {
   font-size: 30px;
   line-height: 1.35;
   margin-bottom: 20px;
 }
 
-.ship-list{
+.ship-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.ship-item{
+.ship-item {
   display: inline-block;
-  width: 300px;
+  width: 230px;
   margin-bottom: 20px;
   text-align: center;
+  padding: 10px 0;
 }
 
-.normal{
+.normal {
   border-radius: 10px;
-  border: 4px solid dimgray;
-  background-color: lightgray;
+  border: 1px solid dimgray;
+  background-color: #e8e8e8;
 }
 
-.rare{
+.rare {
   border-radius: 10px;
-  border: 4px solid deepskyblue;
-  background-color: lightskyblue;
+  border: 1px solid deepskyblue;
+  background-color: #aae4ff;
 }
 
-.super_rare{
+.super_rare {
   border-radius: 10px;
-  border: 4px solid rebeccapurple;
-  background-color: mediumpurple;
+  border: 1px solid rebeccapurple;
+  background-color: #dab1f9;
 }
 
-.double_super_rare{
+.double_super_rare {
   border-radius: 10px;
-  border: 4px solid gold;
-  background-color: palegoldenrod;
+  border: 1px solid gold;
+  background-color: #faf2bc;
 }
 
-.field{
+.field {
   margin-bottom: 5px;
 }
