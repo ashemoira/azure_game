@@ -1,8 +1,8 @@
 class Ship < ApplicationRecord
   extend Enumerize
-  validates :id, presence: true
   validates :name, presence: true
   validates :camp, presence: true
+  validates :number, presence: true
   validates :rarity, presence: true
   validates :ship_type, presence: true
   validates :fleet_position, presence: true
