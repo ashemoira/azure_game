@@ -1,0 +1,28 @@
+ja:
+  enumerize:
+    ship:
+      camp:
+        union: ユニオン
+        royal: ロイヤル
+        sakura_empire: 重桜
+        metal_blood: 鉄血
+        don_fan: ドンファン
+        hokuren: 北連
+        other: その他
+      rarity:
+        normal: N
+        rare: R
+        super_rare: SR
+        double_super_rare: SSR
+      ship_type:
+        destroyer: 駆逐
+        light_cruiser: 軽巡
+        heavy_cruiser: 重巡
+        battleship: 戦艦
+        light_aircraft_carrier: 軽空母
+        aircraft_carrier: 正規空母
+        repair_ship: 工作艦
+        other: その他
+      fleet_position:
+        scout: 前衛艦隊
+        main: 主力艦隊

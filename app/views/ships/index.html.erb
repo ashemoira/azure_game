@@ -1,35 +1,50 @@
-<h1>艦娘一覧</h1>
-<div class="shipList">
-  <div class="card">
-    <div class="field">
-      <p>図鑑番号</p>
-      <p>艦名</p>
-      <p>所属</p>
-      <p>レアリティ</p>
-      <p>艦種</p>
-      <p>ポジション</p>
+<div class="shipListArea">
+  <h1 class="ship-title">艦娘一覧</h1>
+  <div class="ship-list">
+    <div class="ship-item">
+      <div class="field">
+        メモ：カード型のレイアウトにする
+        <div class="field">
+          <p>図鑑番号</p>
+        </div>
+        <div class="field">
+          <p>艦名</p>
+        </div>
+        <div class="field">
+          <p>所属</p>
+        </div>
+        <div class="field">
+          <p>レアリティ</p>
+        </div>
+        <div class="field">
+          <p>艦種</p>
+        </div>
+        <div class="field">
+          <p>ポジション</p>
+        </div>
+      </div>
     </div>
+    <% @ships.each do |ship| %>
+      <div class="ship-item <%= ship.rarity %>">
+        <div class="field">
+          <%= ship.id %>
+        </div>
+        <div class="field">
+          <%= ship.name %>
+        </div>
+        <div class="field">
+          <%= ship.camp.text %>
+        </div>
+        <div class="field">
+          <%= ship.rarity.text %>
+        </div>
+        <div class="field">
+          <%= ship.ship_type.text %>
+        </div>
+        <div class="field">
+          <%= ship.fleet_position.text %>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <% @ships.each do |ship| %>
-    <div class="card">
-      <div class="field">
-        <%= ship.id %>
-      </div>
-      <div class="field">
-        <%= ship.name %>
-      </div>
-      <div class="field">
-        <%= ship.camp %>
-      </div>
-      <div class="field">
-        <%= ship.rarity %>
-      </div>
-      <div class="field">
-        <%= ship.ship_type %>
-      </div>
-      <div class="field">
-        <%= ship.fleet_position %>
-      </div>
-    </div>
-  <% end %>
 </div>

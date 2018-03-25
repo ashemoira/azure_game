@@ -1,27 +1,83 @@
 <%= form_with model: @ship do |form| %>
-  <div class="field">
+  <div class="field_title">
+    図鑑番号
+  </div>
+  <div class="field_detail">
+    <%= form.text_field :id %>
+  </div>
+  <div class="field_title">
     <%= form.label :name, '艦名' %>
+  </div>
+  <div class="field_detail">
     <%= form.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field_title">
     <%= form.label :camp, '所属' %>
-    <%= form.text_field :camp %>
   </div>
-  <div class="field">
+  <div class="field_detail">
+    <%= form.radio_button :camp, :union, label: 'ユニオン', id: 'union' %>
+    <%= form.label :camp, 'ユニオン', for: 'union' %>
+    <%= form.radio_button :camp, :royal, label: 'ロイヤル', id: 'royal' %>
+    <%= form.label :camp, 'ロイヤル', for: 'royal' %>
+    <%= form.radio_button :camp, :sakura_empire, label: '重桜', id: 'sakura_empire' %>
+    <%= form.label :camp, '重桜', for: 'sakura_empire' %>
+    <%= form.radio_button :camp, :metal_blood, label: '鉄血', id: 'metal_blood' %>
+    <%= form.label :camp, '鉄血', for: 'metal_blood' %>
+    <%= form.radio_button :camp, :don_fan, label: 'ドンファン', id: 'don_fan' %>
+    <%= form.label :camp, 'ドンファン', for: 'don_fan' %>
+    <%= form.radio_button :camp, :hokuren, label: '北連', id: 'hokuren' %>
+    <%= form.label :camp, '北連', for: 'hokuren' %>
+    <%= form.radio_button :camp, :other, label: 'その他', id: 'other' %>
+    <%= form.label :camp, 'その他', for: 'other' %>
+  </div>
+  <div class="field_title">
     <%= form.label :rarity, 'レアリティ' %>
-    <%= form.text_field :rarity %>
   </div>
-  <div class="field">
+  <div class="field_detail">
+    <%= form.radio_button :rarity, :normal, label: 'N', id: 'normal' %>
+    <%= form.label :rarity, 'N', for: 'normal' %>
+    <%= form.radio_button :rarity, :rare, label: 'R', id: 'rare' %>
+    <%= form.label :rarity, 'R', for: 'rare' %>
+    <%= form.radio_button :rarity, :super_rare, label: 'SR', id: 'super_rare' %>
+    <%= form.label :rarity, 'SR', for: 'super_rare' %>
+    <%= form.radio_button :rarity, :double_super_rare, label: 'SSR', id: 'double_super_rare' %>
+    <%= form.label :rarity, 'SSR', for: 'double_super_rare' %>
+  </div>
+  <div class="field_title">
     <%= form.label :ship_type, '艦種' %>
-    <%= form.text_field :ship_type %>
   </div>
-  <div class="field">
+  <div class="field_detail">
+    <%= form.radio_button :ship_type, :destroyer, label: '駆逐', id: 'destroyer' %>
+    <%= form.label :ship_type, '駆逐', for: 'destroyer' %>
+    <%= form.radio_button :ship_type, :light_cruiser, label: '軽巡', id: 'light_cruiser' %>
+    <%= form.label :ship_type, '軽巡', for: 'light_cruiser' %>
+    <%= form.radio_button :ship_type, :heavy_cruiser, label: '重巡', id: 'heavy_cruiser' %>
+    <%= form.label :ship_type, '重巡', for: 'heavy_cruiser' %>
+    <%= form.radio_button :ship_type, :battleship, label: '戦艦', id: 'battleship' %>
+    <%= form.label :ship_type, '戦艦', for: 'battleship' %>
+    <%= form.radio_button :ship_type, :light_aircraft_carrier, label: '軽空母', id: 'light_aircraft_carrier' %>
+    <%= form.label :ship_type, '軽空母', for: 'light_aircraft_carrier' %>
+    <%= form.radio_button :ship_type, :aircraft_carrier, label: '正規空母', id: 'aircraft_carrier' %>
+    <%= form.label :ship_type, '正規空母', for: 'aircraft_carrier' %>
+    <%= form.radio_button :ship_type, :repair_ship, label: '工作艦', id: 'repair_ship' %>
+    <%= form.label :ship_type, '工作艦', for: 'repair_ship' %>
+    <%= form.radio_button :ship_type, :other, label: 'その他', id: 'other' %>
+    <%= form.label :ship_type, 'その他', for: 'other' %>
+  </div>
+  <div class="field_title">
     <%= form.label :fleet_position, 'ポジション' %>
-    <%= form.text_field :fleet_position %>
   </div>
-  <div class="field">
+  <div class="field_detail">
+    <%= form.radio_button :fleet_position, :scout, label: '前衛', id: 'scout' %>
+    <%= form.label :fleet_position, '前衛', for: 'scout' %>
+    <%= form.radio_button :fleet_position, :main, label: '後衛', id: 'main' %>
+    <%= form.label :fleet_position, '後衛', for: 'main' %>
+  </div>
+  <div class="field_title">
     <%= form.label :introduction, 'キャラ詳細' %>
-    <%= form.text_field :introduction %>
+  </div>
+  <div class="field_detail">
+    <%= form.text_area :introduction, size: '100x10' %>
   </div>
   <div class="submit_field">
     <%= form.submit submit_name %>

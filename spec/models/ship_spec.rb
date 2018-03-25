@@ -8,5 +8,7 @@ RSpec.describe Ship, type: :model do
     it 'should be name validate' do
       expect(ship).not_to be_valid
     end
+
+    # その他のバリデートテストも追加する
   end
 end

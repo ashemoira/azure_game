@@ -2,7 +2,8 @@ class ShipsController < ApplicationController
   before_action :fetch_ship, only: %i[show edit update]
   before_action :fetch_all_ship, only: %i[index]
 
-  permits :name,
+  permits :id,
+          :name,
           :camp,
           :rarity,
           :ship_type,
@@ -21,11 +22,11 @@ class ShipsController < ApplicationController
 
   def create(ship)
     @ship = Ship.new(ship)
-    if @ship.invalid?
+    if @ship.valid?
       @ship.save
       redirect_to @ship
     else
-      redirect_back(fallback_location: ships_new_path)
+      redirect_back(fallback_location: new_ship_path)
     end
   end
 
@@ -33,7 +34,7 @@ class ShipsController < ApplicationController
     if @ship.update(unit)
       redirect_to @ship
     else
-      redirect_back(fallback_location: ships_edit_path)
+      redirect_back(fallback_location: edit_ship_path)
     end
   end
 
